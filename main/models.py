@@ -8,5 +8,12 @@ class blog(models.Model):
     title = models.CharField(max_length=50, blank=False, null=False)
     text = models.TextField()   
     date = models.DateField(auto_created=True, blank=False, null=False)
-    
+    image = models.ImageField(upload_to='images/')
+class vlog(models.Model):
+    id = models.AutoField(primary_key=True)
+    title = models.CharField(max_length=50, blank=False, null=False)
+    video = models.FileField(upload_to='videos/')
+    description = models.TextField()
+    date = models.DateField(auto_created=True, blank=False, null=False)
+        
     
